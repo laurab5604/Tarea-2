@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Colores
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -8,7 +6,6 @@ BLUE='\033[0;34m'
 PINK='\033[1;35m'
 NC='\033[0m' # Sin color
 
-# Saludo dinámico
 hora=$(date +"%H")
 if [ "$hora" -lt 12 ]; then
     saludo="Buenos días 🌞"
@@ -18,7 +15,6 @@ else
     saludo="Buenas noches 🌙"
 fi
 
-# ASCII de bienvenida
 echo -e "${PINK}"
 echo "   ❤️  _________   "
 echo "  /   \\ Chatbot /   \\"
@@ -27,7 +23,6 @@ echo "  \\___/_________/  "
 echo -e "${NC}"
 echo "$saludo, soy Chatbot personalizado. Escribe cómo te sientes o escribe 'salir' para terminar."
 
-# Bucle principal
 while true; do
     read -p "Tú: " input
     case "$input" in
